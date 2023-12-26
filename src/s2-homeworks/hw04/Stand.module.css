@@ -1,23 +1,38 @@
 .stand {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	display: flex;
 }
 
 .inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
+	display: flex;
+	flex-direction: column;
+	gap: 48px;
+	flex: 0 1 23.27%;
+	min-width: 280px;
 }
 
 .buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
 }
 
 .checkboxes {
-    display: flex;
-    flex-direction: column;
-    gap: 36px;
+	display: flex;
+	flex-direction: column;
+	gap: 36px;
+}
+@media (min-width: 767.98px) {
+	.stand {
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+@media (max-width: 767.98px) {
+	.stand {
+		flex-direction: column;
+		gap: 30px;
+	}
+	.buttons {
+		min-height: 300px;
+	}
 }
