@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import SuperEditableSpan from './common/c4-SuperEditableSpan/SuperEditableSpan'
-import { restoreState, saveState } from './localStorage/localStorage'
+import { useState } from 'react'
 import s2 from '../../s1-main/App.module.css'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
 import s from './HW6.module.css'
+import SuperEditableSpan from './common/c4-SuperEditableSpan/SuperEditableSpan'
+import { restoreState, saveState } from './localStorage/localStorage'
 
 /*
  * 1 - в файле SuperEditableSpan.tsx дописать логику функций onEnterCallback, onBlurCallback, onDoubleClickCallBack
@@ -19,11 +19,13 @@ const HW6 = () => {
     }
     const restore = () => {
         // делают студенты
+        const state = restoreState<string>('hw6-editable-span-value', value)
+        setValue(state)
 
     }
 
     return (
-        <div id={'hw6'}>
+        <div id={'hw6'} style={{ paddingTop: '70px' }}>
             <div className={s2.hwTitle}>Homework #6</div>
 
             {/*демонстрация возможностей компоненты:*/}
