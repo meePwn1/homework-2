@@ -1,9 +1,9 @@
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import s2 from '../../s1-main/App.module.css'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
 import { Loader } from './Loader'
-import { LoadingState, loadingAC } from './bll/loadingReducer'
-import { AppStoreType } from './bll/store'
+import { loadingAC } from './bll/loadingReducer'
+import { useTypedSelector } from './bll/store'
 
 /*
  * 1 - в файле loadingReducer.ts дописать типы и логику
@@ -14,9 +14,7 @@ import { AppStoreType } from './bll/store'
 
 const HW10 = () => {
 	// useSelector, useDispatch // пишет студент
-	const { isLoading } = useSelector<AppStoreType, LoadingState>(
-		state => state.loading
-	)
+	const isLoading = useTypedSelector(state => state.loading.isLoading)
 	const dispatch = useDispatch()
 
 	const setLoading = () => {
