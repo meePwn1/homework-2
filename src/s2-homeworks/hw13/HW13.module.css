@@ -5,6 +5,7 @@
 }
 
 .responseContainer {
+	padding: 0 30px;
 	display: flex;
 	max-width: 1400px;
 	margin: 0 auto;
@@ -33,4 +34,6 @@
 .text {
 }
 .info {
+}
+@media (max-width: 1px) {
 }
