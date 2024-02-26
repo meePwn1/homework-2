@@ -2,6 +2,7 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import s2 from '../../s1-main/App.module.css'
+import { Loader } from '../hw10/Loader'
 import s from './HW15.module.css'
 import SuperSort from './common/c10-SuperSort/SuperSort'
 import SuperPagination from './common/c9-SuperPagination/SuperPagination'
@@ -99,14 +100,20 @@ const HW15 = () => {
 			<div className={s2.hwTitle}>Homework #15</div>
 
 			<div className={s2.hw}>
-				{idLoading && (
-					<div id={'hw15-loading'} className={s.loading}>
-						Loading...
-					</div>
-				)}
-
-				<SuperPagination page={page} itemsCountForPage={count} totalCount={totalCount} onChange={onChangePagination} />
 				<div className={s.rowWrapper}>
+					{idLoading && (
+						<div id={'hw15-loading'} className={s.loading}>
+							<Loader />
+						</div>
+					)}
+
+					<SuperPagination
+						page={page}
+						itemsCountForPage={count}
+						totalCount={totalCount}
+						onChange={onChangePagination}
+					/>
+
 					<div className={s.rowHeader}>
 						<div className={s.techHeader}>
 							Tech
