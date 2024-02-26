@@ -1,11 +1,15 @@
 .pagination {
-    display: flex;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 35px;
+}
+.select {
+	min-width: auto;
 }
 
 .text1 {
-
 }
 
 .text2 {
-
 }

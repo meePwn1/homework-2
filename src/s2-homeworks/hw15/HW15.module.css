@@ -1,27 +1,49 @@
 .tech {
-    width: 50vw;
+	width: 50%;
 }
 
 .developer {
-
 }
 
 .techHeader {
-    width: 50vw;
+	display: inline-flex;
+	align-items: center;
+	width: 50%;
 }
 
 .developerHeader {
-
+	display: inline-flex;
+	align-items: center;
+}
+.developerHeader span,
+.techHeader span {
+	display: inline-flex;
+	align-items: center;
+	padding: 5px;
+}
+.rowWrapper {
+	max-width: 600px;
+}
+.row {
+	display: flex;
+	padding: 12px 15px;
+	font-size: 16px;
 }
 
-.row {
-    display: flex;
+.row:not(:last-child) {
+	border-bottom: 1px solid #e5e5e5;
 }
 
 .rowHeader {
-    display: flex;
+	display: flex;
+	align-items: center;
+	background-color: #e5e5e5;
+	align-items: center;
+	padding: 10px 15px;
+	font-weight: 600;
+	font-size: 14px;
 }
 
 .loading {
-
+	position: absolute;
 }
